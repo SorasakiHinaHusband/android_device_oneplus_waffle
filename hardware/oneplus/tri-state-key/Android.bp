@@ -1,0 +1,18 @@
+//
+// Copyright (C) 2024 MikuUI Project
+//
+// Tri-State Key (Alert Slider) Handler for OnePlus Devices
+//
+
+android_app {
+    name: "TriStateKeyHandler",
+    srcs: ["src/**/*.java", "src/**/*.kt"],
+    resource_dirs: ["res"],
+    certificate: "platform",
+    platform_apis: true,
+    privileged: true,
+    system_ext_specific: true,
+    optimize: {
+        enabled: false,
+    },
+}

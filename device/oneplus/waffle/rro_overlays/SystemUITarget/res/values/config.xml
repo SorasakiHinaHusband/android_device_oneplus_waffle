@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2024 MikuUI Project
+    SystemUI Overlays for OnePlus 12 (waffle)
+-->
+<resources>
+    <!-- Status bar padding and height for centered hole punch display -->
+    <dimen name="status_bar_height">116px</dimen>
+    <dimen name="status_bar_height_default">116px</dimen>
+    <dimen name="status_bar_padding_start">28px</dimen>
+    <dimen name="status_bar_padding_end">28px</dimen>
+
+    <!-- Quick Settings Layout Grid -->
+    <integer name="quick_settings_num_columns">3</integer>
+
+    <!-- Rounded Screen Corner Radius -->
+    <dimen name="rounded_corner_radius">48px</dimen>
+    <dimen name="rounded_corner_radius_top">48px</dimen>
+    <dimen name="rounded_corner_radius_bottom">48px</dimen>
+</resources>

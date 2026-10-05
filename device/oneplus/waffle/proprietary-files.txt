@@ -1,0 +1,39 @@
+#
+# Proprietary Files List for OnePlus 12 (waffle)
+# Format: <destination_path>:<source_path> | <flags>
+#
+
+# Audio / Sound trigger
+vendor/lib64/hw/audio.primary.sm8650.so
+vendor/lib64/libqtigeo.so
+vendor/lib64/soundfx/libswdap.so
+
+# Display & Graphics (QTI Adreno 750 / Display Mapper)
+vendor/lib64/libdisplayconfig.qti.so
+vendor/lib64/hw/gralloc.sm8650.so
+vendor/lib64/hw/hwcomposer.sm8650.so
+
+# Camera (Oplus / Qualcomm Camera HAL)
+vendor/lib64/hw/camera.qcom.so
+vendor/lib64/liboplus_camera_provider.so
+vendor/lib64/libcamera_nn_stub.so
+
+# Biometrics (Fingerprint HAL)
+vendor/lib64/hw/fingerprint.sm8650.so
+vendor/lib64/libfpservice.so
+
+# Radio / Modem / QMI
+vendor/lib64/libgqti.so
+vendor/lib64/libril-qc-hal-qmi.so
+vendor/lib64/libqmi_cci.so
+
+# Sensors
+vendor/lib64/sensors.ssc.so
+
+# DRM / Widevine L1
+vendor/lib64/mediadrm/libwvdrmengine.so
+vendor/lib64/libwvhidl.so
+
+# Wifi & Bluetooth Firmwares
+vendor/firmware/wlan/qca_cld/wlan.ko
+vendor/firmware/wlan/qca_cld/wlan_mac.bin

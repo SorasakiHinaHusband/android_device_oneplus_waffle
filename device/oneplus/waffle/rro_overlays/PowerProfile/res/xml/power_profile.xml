@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Snapdragon 8 Gen 3 (SM8650) Power Profile for OnePlus 12
+    1x Cortex-X4 Super Core
+    5x Cortex-A720 Performance Cores
+    2x Cortex-A520 Efficiency Cores
+-->
+<device name="Android">
+    <item name="none">0</item>
+    <item name="screen.on">110.0</item>
+    <item name="screen.full">320.0</item>
+    <item name="bluetooth.active">18.0</item>
+    <item name="wifi.active">125.0</item>
+    <item name="wifi.on">2.5</item>
+    <item name="radio.active">190.0</item>
+    <item name="radio.on">1.2</item>
+    <item name="gps.on">28.0</item>
+
+    <!-- CPU Clusters Power Speeds (SM8650) -->
+    <array name="cpu.core_speeds.cluster0">
+        <value>600000</value>
+        <value>1000000</value>
+        <value>1400000</value>
+        <value>1800000</value>
+        <value>2265600</value>
+    </array>
+    <array name="cpu.core_power.cluster0">
+        <value>12.0</value>
+        <value>25.0</value>
+        <value>42.0</value>
+        <value>75.0</value>
+        <value>120.0</value>
+    </array>
+
+    <array name="cpu.core_speeds.cluster1">
+        <value>800000</value>
+        <value>1200000</value>
+        <value>1600000</value>
+        <value>2200000</value>
+        <value>3148800</value>
+    </array>
+    <array name="cpu.core_power.cluster1">
+        <value>22.0</value>
+        <value>48.0</value>
+        <value>85.0</value>
+        <value>160.0</value>
+        <value>310.0</value>
+    </array>
+
+    <array name="cpu.core_speeds.cluster2">
+        <value>1000000</value>
+        <value>1500000</value>
+        <value>2000000</value>
+        <value>2800000</value>
+        <value>3302400</value>
+    </array>
+    <array name="cpu.core_power.cluster2">
+        <value>35.0</value>
+        <value>80.0</value>
+        <value>150.0</value>
+        <value>290.0</value>
+        <value>550.0</value>
+    </array>
+</device>

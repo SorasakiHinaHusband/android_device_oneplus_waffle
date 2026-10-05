@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2024 MikuUI Project
+    Settings Overlays for OnePlus 12 (waffle)
+-->
+<resources>
+    <!-- Show Refresh Rate Settings (120Hz LTPO OLED Display) -->
+    <bool name="config_show_refresh_rate_controls">true</bool>
+
+    <!-- Battery Charge Protection / Smart Charging -->
+    <bool name="config_smart_charging_available">true</bool>
+
+    <!-- Pocket Mode / Touch Protection -->
+    <bool name="config_pocket_judge">true</bool>
+</resources>

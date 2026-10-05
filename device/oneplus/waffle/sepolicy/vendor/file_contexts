@@ -1,0 +1,13 @@
+#
+# SELinux File Contexts for OnePlus 12 (waffle)
+#
+
+# Tri-State Alert Slider Node
+/sys/devices/platform/soc/soc:tri_state_key/state                  u:object_r:sysfs_tri_state_key:s0
+
+# Fingerprint Node
+/dev/oplus_fp                                                       u:object_r:fingerprint_device:s0
+/sys/kernel/oppo_display/dump_info                                  u:object_r:sysfs_graphics:s0
+
+# Touchscreen
+/proc/touchpanel/double_tap_enable                                  u:object_r:proc_touchpanel:s0

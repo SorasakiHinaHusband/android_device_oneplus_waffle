@@ -1,0 +1,16 @@
+# Android fstab file for OnePlus 12 (waffle - SM8650)
+#
+#<src>                                                 <mnt_point>            <type>  <mnt_flags and options>                                                           <fs_mgr_flags>
+system                                                  /system                erofs   ro                                                                                wait,slotselect,avb=vbmeta_system,logical,first_stage_mount
+system_ext                                              /system_ext            erofs   ro                                                                                wait,slotselect,avb=vbmeta_system,logical,first_stage_mount
+product                                                 /product               erofs   ro                                                                                wait,slotselect,avb=vbmeta_system,logical,first_stage_mount
+vendor                                                  /vendor                erofs   ro                                                                                wait,slotselect,avb,logical,first_stage_mount
+vendor_dlkm                                             /vendor_dlkm           erofs   ro                                                                                wait,slotselect,avb,logical,first_stage_mount
+system_dlkm                                             /system_dlkm           erofs   ro                                                                                wait,slotselect,avb,logical,first_stage_mount
+odm                                                     /odm                   erofs   ro                                                                                wait,slotselect,avb,logical,first_stage_mount
+
+# Userdata Partition
+/dev/block/bootdevice/by-name/userdata                  /data                  f2fs    noatime,nosuid,nodev,discard,usrquota,grpquota,fsync_mode=nobarrier,reserve_root=32768,resgid=5678,inlinecrypt,alloc_mode=default,fscompress  wait,check,formattable,quota,latemount,resize,checkpoint=fs,fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized,metadata_encryption=aes-256-xts,keydirectory=/metadata/vold/metadata_encryption
+
+# Metadata Partition
+/dev/block/bootdevice/by-name/metadata                  /metadata              ext4    noatime,nosuid,nodev,discard,sync                                                 wait,check,formattable,first_stage_mount

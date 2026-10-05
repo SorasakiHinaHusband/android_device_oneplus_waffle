@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!-- OnePlus 12 (waffle) Device & Vendor Repositories for MikuUI -->
+
+  <!-- Device Trees -->
+  <project path="device/oneplus/waffle" name="device_oneplus_waffle" remote="github" revision="miku-14" />
+  <project path="device/oneplus/sm8650-common" name="device_oneplus_sm8650-common" remote="github" revision="miku-14" />
+
+  <!-- Vendor Blobs -->
+  <project path="vendor/oneplus/waffle" name="vendor_oneplus_waffle" remote="github" revision="miku-14" />
+  <project path="vendor/oneplus/sm8650-common" name="vendor_oneplus_sm8650-common" remote="github" revision="miku-14" />
+
+  <!-- Hardware Drivers (Tri-state Alert Slider, Haptics) -->
+  <project path="hardware/oneplus" name="hardware_oneplus" remote="github" revision="miku-14" />
+
+  <!-- Qualcomm Hardware Interfaces (SM8650 HALs) -->
+  <project path="hardware/qcom-caf/sm8650/audio/aidl" name="MikuUI/android_hardware_qcom_audio-caf_sm8650" remote="github" revision="miku-14" />
+  <project path="hardware/qcom-caf/sm8650/display" name="MikuUI/android_hardware_qcom_display-caf_sm8650" remote="github" revision="miku-14" />
+  <project path="hardware/qcom-caf/sm8650/media" name="MikuUI/android_hardware_qcom_media-caf_sm8650" remote="github" revision="miku-14" />
+
+  <!-- Kernel Prebuilt / Source (SM8650 GKI Modules) -->
+  <project path="kernel/oneplus/sm8650" name="kernel_oneplus_sm8650" remote="github" revision="miku-14" />
+  <project path="kernel/oneplus/sm8650-modules" name="kernel_oneplus_sm8650-modules" remote="github" revision="miku-14" />
+  <project path="kernel/oneplus/sm8650-devicetrees" name="kernel_oneplus_sm8650-devicetrees" remote="github" revision="miku-14" />
+</manifest>

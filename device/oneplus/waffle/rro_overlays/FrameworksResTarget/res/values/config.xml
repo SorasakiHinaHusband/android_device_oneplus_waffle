@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2024 MikuUI Project
+    Framework Overlays for OnePlus 12 (waffle)
+-->
+<resources>
+    <!-- Flag indicating whether the device supports Wireless Charging -->
+    <bool name="config_supportWirelessCharging">true</bool>
+
+    <!-- Fingerprint Under-Display (UDFPS) Location & Type -->
+    <!-- Type: 0 = Optical, 1 = Ultrasonic -->
+    <integer name="config_udfps_sensor_type">0</integer>
+    <!-- Screen cutout / Hole punch coordinates -->
+    <string name="config_mainBuiltInDisplayCutout">M 0,0 M 540,116 M 580,116 A 40,40 0 1,1 500,116 A 40,40 0 1,1 580,116 Z</string>
+
+    <!-- Default Screen Brightness Settings (120Hz LTPO OLED Display) -->
+    <integer name="config_screenBrightnessSettingMinimum">1</integer>
+    <integer name="config_screenBrightnessSettingMaximum">255</integer>
+    <integer name="config_screenBrightnessSettingDefault">102</integer>
+
+    <!-- Indicate whether the automatic brightness control mode is supported -->
+    <bool name="config_automatic_brightness_available">true</bool>
+
+    <!-- Network / Radio config -->
+    <bool name="config_show4GForLTE">true</bool>
+    <bool name="config_supportsMobileData">true</bool>
+</resources>
