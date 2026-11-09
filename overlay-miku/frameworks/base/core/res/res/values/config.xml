@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 默认短信应用：未设置时系统不会向应用投递新短信，导致收不到通知 -->
+    <string name="config_defaultSms" translatable="false">com.android.messaging</string>
+</resources>

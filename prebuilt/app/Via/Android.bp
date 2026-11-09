@@ -1,0 +1,10 @@
+// Via 浏览器（第三方 APK，保留原签名，不做 dex 预优化）
+android_app_import {
+    name: "Via",
+    apk: "Via.apk",
+    presigned: true,
+    preprocessed: true,
+    dex_preopt: {
+        enabled: false,
+    },
+}

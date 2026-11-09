@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    短信应用所需特权权限。
+    应用已通过 Android.bp 的 privileged: true 安装到 /product/priv-app/，
+    但仍需此白名单才能在 Android 9+ 上真正获得 signature|privileged 权限。
+-->
+<permissions>
+    <privapp-permissions package="com.android.messaging">
+        <permission name="android.permission.READ_CELL_BROADCASTS"/>
+        <permission name="android.permission.RECEIVE_WAP_PUSH"/>
+        <permission name="android.permission.RECEIVE_MMS"/>
+        <permission name="android.permission.RECEIVE_SMS"/>
+        <permission name="android.permission.READ_SMS"/>
+        <permission name="android.permission.SEND_SMS"/>
+        <permission name="android.permission.WRITE_SMS"/>
+    </privapp-permissions>
+</permissions>
