@@ -26,18 +26,13 @@ apply() {
 }
 
 # 自动查找三段式按键的 input 设备
+# 注意：shell 域读不了 /sys/class/input/*/device/name，
+#       必须用 getevent -lp 列出的 name 来匹配。
 find_dev() {
-    for d in /sys/class/input/event*; do
-        [ -e "$d" ] || continue
-        n=$(cat "$d/device/name" 2>/dev/null)
-        case "$n" in
-            *tri*state*|*tri-state*|*hall*|*Hall*)
-                echo "/dev/input/$(basename "$d")"
-                return 0
-                ;;
-        esac
-    done
-    return 1
+    getevent -lp 2>/dev/null | awk '
+        /^add device/ { dev = $NF }
+        /name:/ && tolower($0) ~ /tri|hall/ { print dev; exit }
+    '
 }
 
 # 可读 proc 节点时，直接轮询（最可靠）
@@ -57,12 +52,14 @@ watch_proc() {
     done
 }
 
-# 否则解析 getevent（KEY_F3 的 value 即档位）
+# 解析 getevent：内核补丁在拨动时会额外上报 EV_MSC/MSC_SCAN（0x0004 0x0004），
+# 其 value 就是真实档位 1/2/3。
+# 注意：KEY_F3 事件的 value 被 input_report_key 压成 0/1，不能用来判断档位。
 watch_events() {
     dev="$1"
     getevent "$dev" 2>/dev/null | while read -r line; do
         case "$line" in
-            *" 0001 003d "*)
+            *"0004 0004 "*)
                 hex=$(printf '%s\n' "$line" | awk '{print $NF}')
                 case "$hex" in
                     *[!0-9a-fA-F]*) continue ;;
