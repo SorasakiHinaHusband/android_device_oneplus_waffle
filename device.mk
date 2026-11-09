@@ -89,7 +89,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/etc/permissions/privapp-permissions-com.android.messaging.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.android.messaging.xml
 
 # 一加三段式拨动键（静音/振动/响铃）
-# service 必须追加到 init.target.rc（被 init.qcom.rc 显式 import），
-# /vendor/etc/init 下的独立 rc 不会被 init 解析
+#
+# 脚本装在 /system_ext/bin，并在 device/miku/sepolicy/common/private/file_contexts
+# 中打上 shell_exec 标签：
+#   服务通过 /system/bin/sh 拉起、以 shell 域运行，
+#   shell 域有 allow shell shell_exec:file rx_file_perms，
+#   只有 shell_exec 标签的文件它才读得到 / 执行得了。
+#   放在 /vendor/bin 或标成普通 system_file 都会因读不到脚本而起不来。
+#   service 本体写在 sm8650-common/init/init.target.rc 里
+#   （/vendor/etc/init 下的独立 rc 不会被 init 解析）。
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/vendor/bin/alert-slider.sh:$(TARGET_COPY_OUT_VENDOR)/bin/alert-slider.sh
+    $(LOCAL_PATH)/prebuilt/alert-slider/alert-slider.sh:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/alert-slider.sh

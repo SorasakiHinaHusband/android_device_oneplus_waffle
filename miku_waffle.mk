@@ -46,3 +46,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 # 预装 Via 浏览器（第三方 APK，位于 prebuilt/app/Via）
 PRODUCT_PACKAGES += \
     Via
+
+# 补充 TheMuppets blob 缺失的 QTI 蓝牙音频 HAL（LE Audio / A2DP 数据泵）
+PRODUCT_PACKAGES += \
+    audio.bluetooth_qti.default
