@@ -8,9 +8,9 @@
 # 构建者名称（显示为「维护者」）
 MIKU_MASTER := SakuraMio
 
-# 正式版构建标识与签名
-# OFFICIAL 使 ro.miku.buildtype=OFFICIAL
-TARGET_MIKU_BUILD_VARIANT := OFFICIAL
+# 构建类型：通过官方审核前保持 UNOFFICIAL
+# 审核通过后改为 OFFICIAL（ro.miku.buildtype 会随之变化）
+TARGET_MIKU_BUILD_VARIANT := UNOFFICIAL
 
 # 使用自建密钥签名，替代 AOSP 的 testkey
 # 生成的 releasekey/platform/shared/media/networkstack/sdk_sandbox/bluetooth/verity
