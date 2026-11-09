@@ -8,7 +8,7 @@
 # 构建者名称（显示为「维护者」）
 MIKU_MASTER := SakuraMio
 
-# 构建类型：通过官方审核前保持 UNOFFICIAL
+# 构建类型：在通过官方审核前保持 UNOFFICIAL
 # 审核通过后改为 OFFICIAL（ro.miku.buildtype 会随之变化）
 TARGET_MIKU_BUILD_VARIANT := UNOFFICIAL
 
@@ -46,7 +46,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 # 预装 Via 浏览器（第三方 APK，位于 prebuilt/app/Via）
 PRODUCT_PACKAGES += \
     Via
-
-# 补充 TheMuppets blob 缺失的 QTI 蓝牙音频 HAL（LE Audio / A2DP 数据泵）
-PRODUCT_PACKAGES += \
-    audio.bluetooth_qti.default
